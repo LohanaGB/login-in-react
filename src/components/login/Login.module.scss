@@ -1,0 +1,100 @@
+.container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.39);
+    border-top: 1px solid rgba(255, 255, 255, 0.39);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    text-shadow: #00000059 1px 1px;
+    width: 450px;
+    h1 {
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+    }
+    &__inputField {
+        height: 50px;
+        margin: 30px auto;
+        position: relative;
+        width: 100%;
+        input {
+            background: transparent;
+            border-radius: 30px;
+            border: 2px solid #ffffff3d;
+            color: #fff;
+            font-size: 16px;
+            height: 100%;
+            outline: none;
+            padding: 20px 25px;
+            width: 100%;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        &__icon {
+            color: #fff;
+            font-size: 18px;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__recallForget {
+        display: flex;
+        font-size: 14.5px;
+        justify-content: space-between;
+        margin: -15px 0 15px;
+        label {
+            color: #fff;
+        }
+        input {
+            margin-right: 5px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    button {
+        background: #fff;
+        border-radius: 40px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: #485858;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        height: 50px;
+        outline: none;
+        text-shadow: none;
+        transition: all 0.5s;
+        width: 100%;
+        &:hover {
+            background: #485858;
+            color: #fff;
+        }
+    }
+    &__signupLink {
+        font-size: 15px;
+        margin: 20px 0 10px;
+        text-align: center;
+        text-shadow: none;
+        color: #293131;
+        p {
+            a {
+                color: #fff;
+                text-decoration: none;
+                text-shadow: #00000059 1px 1px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

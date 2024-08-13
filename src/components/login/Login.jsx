@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaUser, FaLock} from 'react-icons/fa';
 import { useState } from 'react';
-import './Login.css';
+import S from './Login.module.scss';
 
 const Login = () => {
 
@@ -16,28 +16,28 @@ const Login = () => {
     }
 
   return (
-    <div className="container">
+    <div className={S.container}>
         <form onSubmit={handleSubmit}>
-            <h1>Acesse o sistema</h1>
+            <h1 className={S.h1}>Acesse o sistema</h1>
 
-            <div className="input-field">
+            <div className={S.container__inputField}>
                 <input 
                     type="email" 
                     placeholder="E-mail" 
                     onChange={(e)=> setUserName(e.target.value)}
                 />
-                <FaUser className="icon" />
+                <FaUser className={S.container__inputField__icon} />
             </div>
-            <div className="input-field">
+            <div className={S.container__inputField}>
                 <input
                     type="password"
                     placeholder="Senha"
                     onChange={(e)=> setPassword(e.target.value)}
                 /> 
-                <FaLock className="icon" />
+                <FaLock className={S.container__inputField__icon} />
             </div>
 
-            <div className="recall-forget">
+            <div className={S.container__recallForget}>
                 <label>
                     <input type="checkbox" />
                     Lembre de mim
@@ -47,7 +47,7 @@ const Login = () => {
 
             <button>Entrar</button>
 
-            <div className="signup-link">
+            <div className={S.container__signupLink}>
                 <p>
                     Não tem uma conta? <a href="#">Registrar</a>
                 </p>
