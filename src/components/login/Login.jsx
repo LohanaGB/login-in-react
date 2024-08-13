@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaUser, FaLock} from 'react-icons/fa';
 import { useState } from 'react';
-// import s from './Login.css';
+import './Login.css';
 
 const Login = () => {
 
@@ -20,7 +20,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
             <h1>Acesse o sistema</h1>
 
-            <div>
+            <div className="input-field">
                 <input 
                     type="email" 
                     placeholder="E-mail" 
@@ -28,7 +28,7 @@ const Login = () => {
                 />
                 <FaUser className="icon" />
             </div>
-            <div>
+            <div className="input-field">
                 <input
                     type="password"
                     placeholder="Senha"
