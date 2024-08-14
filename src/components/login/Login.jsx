@@ -11,20 +11,26 @@ const Login = () => {
     const handleSubmit = (e)=> {
         //preventDefault() impede um evento padrão de ser executado, por exemplo, ao submeter um formulário de carregar a página automaticamente
         e.preventDefault();
-
         alert(`Enviando os dados: ${username} - ${password}`);
+    }
+
+    const Entrar = ()=> {
+        if(username, password === "") {
+            alert('ERRO: Preencha os campos necessários');
+        }
     }
 
   return (
     <div className={S.container}>
-        <form onSubmit={handleSubmit}>
+        <form>
+            
             <h1 className={S.h1}>Acesse o sistema</h1>
 
             <div className={S.container__inputField}>
                 <input 
                     type="email" 
                     placeholder="E-mail" 
-                    onChange={(e)=> setUserName(e.target.value)}
+                    // onChange={(e)=> setUserName(e.target.value)}
                 />
                 <FaUser className={S.container__inputField__icon} />
             </div>
@@ -32,7 +38,7 @@ const Login = () => {
                 <input
                     type="password"
                     placeholder="Senha"
-                    onChange={(e)=> setPassword(e.target.value)}
+                    // onChange={(e)=> setPassword(e.target.value)}
                 /> 
                 <FaLock className={S.container__inputField__icon} />
             </div>
@@ -45,7 +51,7 @@ const Login = () => {
                 <a href="#">Esqueceu a senha?</a>
             </div>
 
-            <button>Entrar</button>
+            <button onClick={Entrar()}>Entrar</button>
 
             <div className={S.container__signupLink}>
                 <p>
